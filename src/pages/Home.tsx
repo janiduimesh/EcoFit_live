@@ -1,10 +1,12 @@
 
 import React from 'react';
+import demoImage from '../assets/demoi.png';
 import Section from '../components/Section';
 import Timeline from '../components/Timeline';
 import Documents from '../components/Documents';
+import TechStack from '../components/TechStack';
 import { content } from '../data/content';
-import { ArrowRight, Activity, Brain, Shield } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 const Home: React.FC = () => {
     const scrollToSection = (id: string) => {
@@ -43,6 +45,7 @@ const Home: React.FC = () => {
                 </div>
             </div>
 
+
             {/* Features Section */}
             <div id="features" className="bg-white pt-16">
                 <Section title="Project Overview"> {/* keeping title but using features ID for scrolling */}
@@ -63,14 +66,14 @@ const Home: React.FC = () => {
                             </div>
 
                             {/* Domain Section - inferred from abstract/context */}
-                            <div id="domain" className="mt-8 scroll-mt-20">
+                            {/* <div id="domain" className="mt-8 scroll-mt-20">
                                 <h3 className="text-2xl font-bold mb-4 text-gray-900">Research Domain</h3>
                                 <p className="text-gray-700 leading-relaxed mb-6">
                                     This research operates at the intersection of <strong>IoT, Artificial Intelligence, and Environmental Science</strong>. We utilize state-of-the-art sensors and data analytics to modernize waste management, ensuring cleaner and greener urban environments.
                                 </p>
-                            </div>
+                            </div> */}
 
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+                            {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
                                 <div className="flex items-start">
                                     <div className="bg-emerald-100 p-3 rounded-lg mr-4">
                                         <Activity className="h-6 w-6 text-emerald-600" />
@@ -98,18 +101,21 @@ const Home: React.FC = () => {
                                         <p className="text-gray-600 text-sm">Reducing carbon footprint and promoting recycling.</p>
                                     </div>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
                         <div className="flex-1">
                             <img
-                                src="https://images.unsplash.com/photo-1550989460-0adf9ea622e2?auto=format&fit=crop&q=80&w=800"
+                                src={demoImage}
                                 alt="Smart City Waste Management"
-                                className="rounded-2xl shadow-2xl"
+                                className="w-[900px] h-full object-contain scale-125"
                             />
                         </div>
                     </div>
                 </div>
             </div>
+
+            {/* Tech Stack Marquee */}
+            <TechStack />
 
             {/* Documents Section */}
             <div id="documents" className="bg-gray-50">

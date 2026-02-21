@@ -1,7 +1,6 @@
-
-
 import React, { useState } from 'react';
-import { Menu, X, Rocket } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
+import logoImage from '../assets/waste_logo.png';
 
 const Navbar: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -34,8 +33,8 @@ const Navbar: React.FC = () => {
                 <div className="flex justify-between h-16">
                     <div className="flex items-center">
                         <button onClick={() => scrollToSection('#')} className="flex items-center space-x-2">
-                            <Rocket className="h-8 w-8 text-indigo-600" />
-                            <span className="font-bold text-xl text-gray-900">EcoFit Research</span>
+                            <img src={logoImage} alt="Logo" className="h-30 w-25" />
+                            {/* <span className="font-bold text-xl text-gray-900">EcoFit Research</span> */}
                         </button>
                     </div>
 
