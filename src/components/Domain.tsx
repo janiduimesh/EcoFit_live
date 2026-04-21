@@ -37,7 +37,7 @@ const Domain: React.FC = () => {
                 {/* Content Card */}
                 <div className="bg-white border border-gray-200 rounded-xl p-8 md:p-10 shadow-sm">
                     <h3 className="text-xl font-bold text-gray-900 mb-5">{activeItem.title}</h3>
-                    <p className="text-gray-600 leading-relaxed text-[15px]">
+                    <p className="text-gray-600 leading-relaxed text-[15px] whitespace-pre-wrap text-justify">
                         {activeItem.description}
                     </p>
                 </div>

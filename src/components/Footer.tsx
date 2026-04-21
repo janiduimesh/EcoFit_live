@@ -1,7 +1,40 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
 import { Facebook, Twitter, Youtube } from 'lucide-react';
 
 const Footer: React.FC = () => {
+    const form = useRef<HTMLFormElement>(null);
+    const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+
+    const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+
+        if (!form.current) return;
+
+        setStatus('loading');
+
+        // Replace these with your actual EmailJS IDs
+        emailjs
+            .sendForm(
+                'service_emxur9p',
+                'template_6m4elpm',
+                form.current,
+                'LTu5eL1Qw36dHobjH'
+            )
+            .then(
+                () => {
+                    setStatus('success');
+                    form.current?.reset();
+                    setTimeout(() => setStatus('idle'), 5000);
+                },
+                (error) => {
+                    console.error('FAILED...', error.text);
+                    setStatus('error');
+                    setTimeout(() => setStatus('idle'), 5000);
+                }
+            );
+    };
+
     return (
         <footer id="contact" className="bg-black text-white py-16">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -13,30 +46,47 @@ const Footer: React.FC = () => {
                         <p className="mb-8 text-gray-300">
                             Please fill out the form below to send us an email and we will get back to you as soon as possible.
                         </p>
-                        <form className="space-y-4">
+                        <form ref={form} onSubmit={sendEmail} className="space-y-4">
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <input
                                     type="text"
+                                    name="user_name"
+                                    required
                                     placeholder="Name"
                                     className="w-full px-4 py-3 bg-white text-gray-900 rounded-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
                                 />
                                 <input
                                     type="email"
+                                    name="user_email"
+                                    required
                                     placeholder="Email"
                                     className="w-full px-4 py-3 bg-white text-gray-900 rounded-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"
                                 />
                             </div>
                             <textarea
+                                name="message"
+                                required
                                 placeholder="Message"
                                 rows={4}
                                 className="w-full px-4 py-3 bg-white text-gray-900 rounded-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 resize-none"
                             ></textarea>
-                            <button
-                                type="submit"
-                                className="px-8 py-3 bg-transparent border border-white text-white rounded-full hover:bg-white hover:text-black transition duration-300 font-medium uppercase text-sm"
-                            >
-                                Send Message
-                            </button>
+
+                            <div className="flex items-center gap-4">
+                                <button
+                                    type="submit"
+                                    disabled={status === 'loading'}
+                                    className="px-8 py-3 bg-transparent border border-white text-white rounded-full hover:bg-white hover:text-black transition duration-300 font-medium uppercase text-sm disabled:opacity-50 disabled:cursor-not-allowed"
+                                >
+                                    {status === 'loading' ? 'Sending...' : 'Send Message'}
+                                </button>
+
+                                {status === 'success' && (
+                                    <span className="text-emerald-500 text-sm font-medium">Message sent successfully!</span>
+                                )}
+                                {status === 'error' && (
+                                    <span className="text-red-500 text-sm font-medium">Failed to send message. Please try again.</span>
+                                )}
+                            </div>
                         </form>
                     </div>
 
