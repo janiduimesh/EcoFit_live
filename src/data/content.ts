@@ -70,56 +70,56 @@ export const content = {
     timeline: [
         {
             title: "Project Proposal (Presentation + Proposal Report)",
-            date: "February 2024",
+            date: "September 2025",
             marks: "12%",
             tags: ["Group", "Individual"]
         },
         {
             title: "Progress Presentation – 1",
-            date: "May 2024",
+            date: "December 2025",
             marks: "15%",
             tags: ["Group", "Individual"]
         },
         {
-            title: "Research Paper Publication",
-            date: "August 2024",
-            marks: "10%",
-            tags: ["Group"]
-        },
-        {
-            title: "Final Reports (Thesis)",
-            date: "August 2024",
-            marks: "19%",
-            tags: ["Group", "Individual"]
+            title: "Checklist Documents 1 & 2",
+            date: "December 2025",
+            marks: "2%",
+            tags: ["Individual"]
         },
         {
             title: "Progress Presentation – 2",
-            date: "September 2024",
+            date: "March 2026",
             marks: "18%",
             tags: ["Group", "Individual"]
         },
         {
-            title: "Status Documents 1 & 2",
-            date: "May and September 2024",
-            marks: "2%",
-            tags: ["Individual"]
-        },
-        {
-            title: "Log Books",
-            date: "November 2024",
-            marks: "2%",
-            tags: ["Individual"]
-        },
-        {
             title: "Final Presentation + Viva",
-            date: "October 2024",
+            date: "April 2026",
             marks: "20%",
             tags: ["Group", "Individual"]
         },
         {
             title: "Website Development",
-            date: "October 2024",
+            date: "April 2026",
             marks: "2%",
+            tags: ["Group"]
+        },
+        {
+            title: "Final Reports (Thesis)",
+            date: "May 2026",
+            marks: "19%",
+            tags: ["Group", "Individual"]
+        },
+        {
+            title: "Log Books",
+            date: "May 2026",
+            marks: "2%",
+            tags: ["Individual"]
+        },
+        {
+            title: "Research Paper Publication",
+            date: "June 2026",
+            marks: "10%",
             tags: ["Group"]
         }
     ],
@@ -180,12 +180,12 @@ export const content = {
         {
             tab: "Literature Survey",
             title: "LITERATURE SURVEY",
-            description: "In recent years, municipal waste management has increasingly evolved through the adoption of artificial intelligence, Internet of Things (IoT), and data-driven technologies. A significant body of research has focused on automated waste classification using computer vision and natural language processing techniques to improve waste segregation accuracy. Parallel to this, IoT-enabled smart bin systems have been introduced to monitor fill levels in real time, enabling more efficient collection scheduling and reducing operational inefficiencies. Time-series forecasting methods, including machine learning and deep learning approaches, have been widely applied to predict waste generation trends and support planning activities. Furthermore, economic models such as Pay-As-You-Throw (PAYT) have been explored to encourage environmentally responsible behavior by linking waste generation with financial incentives. More recently, conversational AI systems have emerged as effective tools for disseminating waste-related information and assisting citizens in real time. However, most existing solutions tend to address these aspects in isolation, lacking an integrated framework that connects citizen interaction, operational processes, and strategic municipal planning into a unified system."
+            description: "In recent years, municipal waste management has increasingly evolved through the adoption of artificial intelligence, Internet of Things (IoT), and data driven technologies. A significant body of research has focused on automated waste classification using computer vision and natural language processing techniques to improve waste segregation accuracy. Parallel to this, IoT-enabled smart bin systems have been introduced to monitor fill levels in real time, enabling more efficient collection scheduling and reducing operational inefficiencies. Time series forecasting methods, including machine learning and deep learning approaches, have been widely applied to predict waste generation trends and support planning activities. Furthermore, economic models such as Pay-As-You-Throw (PAYT) have been explored to encourage environmentally responsible behavior by linking waste generation with financial incentives. More recently, conversational AI systems have emerged as effective tools for disseminating waste-related information and assisting citizens in real time. However, most existing solutions tend to address these aspects in isolation, lacking an integrated framework that connects citizen interaction, operational processes, and strategic municipal planning into a unified system."
         },
         {
             tab: "Research Problem",
             title: "RESEARCH PROBLEM",
-            description: "Rapid urbanization and population growth have significantly increased the volume and complexity of municipal waste, creating major challenges for existing waste management systems, particularly in developing countries such as Sri Lanka. Traditional waste management practices largely depend on fixed collection schedules and manual coordination, which often result in inefficient resource utilization, delayed collections, bin overflows, and increased operational costs. At the household level, there is a lack of proper awareness and guidance on waste segregation and disposal practices. This leads to contamination of recyclable materials, reduced recycling efficiency, and a greater reliance on landfill disposal. Additionally, current systems do not incorporate behavior-based incentive mechanisms, limiting citizen motivation to adopt sustainable waste practices. These challenges highlight the need for an intelligent and cost-effective waste management system that can simultaneously support citizens and municipal authorities by enhancing decision-making, optimizing operational efficiency, and promoting environmentally responsible behavior."
+            description: "Rapid urbanization and population growth have significantly increased the volume and complexity of municipal waste, creating major challenges for existing waste management systems, particularly in developing countries such as Sri Lanka. Traditional waste management practices largely depend on fixed collection schedules and manual coordination, which often result in inefficient resource utilization, delayed collections, bin overflows, and increased operational costs. At the household level, there is a lack of proper awareness and guidance on waste segregation and disposal practices. This leads to contamination of recyclable materials, reduced recycling efficiency, and a greater reliance on landfill disposal. Additionally, current systems do not incorporate behavior based incentive mechanisms, limiting citizen motivation to adopt sustainable waste practices. These challenges highlight the need for an intelligent and cost-effective waste management system that can simultaneously support citizens and municipal authorities by enhancing decision-making, optimizing operational efficiency, and promoting environmentally responsible behavior."
         },
         {
             tab: "Research Gap",
