@@ -29,7 +29,7 @@ const Home: React.FC = () => {
     return (
         <div className="flex flex-col">
             {/* Hero Section — Full screen cinematic */}
-            <div className="relative min-h-screen flex flex-col justify-center items-center text-white overflow-hidden">
+            <div className="relative min-h-screen flex flex-col text-white overflow-hidden">
                 {/* Background image */}
                 <div className="absolute inset-0">
                     <img
@@ -41,25 +41,27 @@ const Home: React.FC = () => {
                 </div>
 
                 {/* Centered content */}
-                <div className="relative z-10 text-center px-4 max-w-4xl mx-auto mt-[-60px]">
-                    <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 hero-title-glow">
-                        {content.title}
-                    </h1>
-                    <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-10 leading-relaxed">
-                        {content.subtitle}
-                    </p>
-                    <div className="flex flex-wrap justify-center gap-4">
-                        <button onClick={() => scrollToSection('documents')} className="px-8 py-3 bg-emerald-500 text-white font-semibold rounded-full hover:bg-emerald-400 transition duration-300 flex items-center cursor-pointer shadow-lg shadow-emerald-500/30">
-                            View Publications <ArrowRight className="ml-2 h-5 w-5" />
-                        </button>
-                        <button onClick={() => scrollToSection('team')} className="px-8 py-3 bg-white/10 backdrop-blur-sm border border-white/30 text-white font-semibold rounded-full hover:bg-white/20 transition duration-300 cursor-pointer">
-                            Meet the Team
-                        </button>
+                <div className="flex-1 flex flex-col justify-center items-center relative z-10 w-full px-4 pt-20 pb-10">
+                    <div className="text-center max-w-4xl mx-auto">
+                        <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 hero-title-glow">
+                            {content.title}
+                        </h1>
+                        <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-10 leading-relaxed">
+                            {content.subtitle}
+                        </p>
+                        <div className="flex flex-wrap justify-center gap-4">
+                            <button onClick={() => scrollToSection('documents')} className="px-8 py-3 bg-emerald-500 text-white font-semibold rounded-full hover:bg-emerald-400 transition duration-300 flex items-center cursor-pointer shadow-lg shadow-emerald-500/30">
+                                View Publications <ArrowRight className="ml-2 h-5 w-5" />
+                            </button>
+                            <button onClick={() => scrollToSection('team')} className="px-8 py-3 bg-white/10 backdrop-blur-sm border border-white/30 text-white font-semibold rounded-full hover:bg-white/20 transition duration-300 cursor-pointer">
+                                Meet the Team
+                            </button>
+                        </div>
                     </div>
                 </div>
 
                 {/* Feature cards at bottom */}
-                <div className="absolute bottom-8 left-0 right-0 z-10 px-4">
+                <div className="relative z-10 w-full px-4 pb-8">
                     <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-5 gap-3">
                         {content.features.map((feat, index) => (
                             <div
